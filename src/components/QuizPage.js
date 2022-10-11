@@ -9,7 +9,7 @@ const QuizPage = () => {
     const { id, logo, name, questions, total } = quizData.data;
 
     return (
-        <div className='lg:grid grid-cols-12 gap-5 m-8'>
+        <div className='sm:flex flex-col-reverse lg:grid grid-cols-12 gap-5 m-8'>
 
             <div className='col-span-8'>
                 <h2 className='text-2xl font-bold text-center text-cyan-500'>Quiz of {name}</h2>
@@ -27,7 +27,7 @@ const QuizPage = () => {
 
 
             <div className='col-span-4 bg-yellow-300'>
-
+                    <p className='text-center text-2xl p-5'>Hello yellow</p>
             </div>
         </div>
     );
