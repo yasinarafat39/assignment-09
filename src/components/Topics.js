@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
 import { QuizTopicsContext } from '../Main';
-import QuizPage from './QuizPage';
 import SingleTopic from './SingleTopic';
 
 
@@ -40,10 +38,6 @@ const Topics = () => {
                 }
             </div>
 
-
-            <div>
-                <QuizPage ></QuizPage>
-            </div>
         </div>
     );
 };
