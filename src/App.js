@@ -12,7 +12,7 @@ import QuizPage from './components/QuizPage';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Main />,
     errorElement: <ErrorPage />,
     loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),

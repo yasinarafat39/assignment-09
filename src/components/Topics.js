@@ -1,12 +1,17 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { QuizTopicsContext } from '../Main';
+import QuizPage from './QuizPage';
 import SingleTopic from './SingleTopic';
 
 
 const Topics = () => {
-    
+
     const quizTopics = useContext(QuizTopicsContext)
+
+    const handleAddToSingleTopic = (singleTopic) => {
+        console.log('start practice', singleTopic);
+    }
 
     return (
         <div className='lg:px-16'>
@@ -27,13 +32,18 @@ const Topics = () => {
 
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-6 mx-9'>
                 {
-                   quizTopics.map(singleTopic => <SingleTopic
-                   key={singleTopic.id}
-                   singleTopic={singleTopic}
-                   ></SingleTopic>) 
+                    quizTopics.map(singleTopic => <SingleTopic
+                        key={singleTopic.id}
+                        singleTopic={singleTopic}
+                        handleAddToSingleTopic={handleAddToSingleTopic}
+                    ></SingleTopic>)
                 }
             </div>
 
+
+            <div>
+                <QuizPage ></QuizPage>
+            </div>
         </div>
     );
 };
