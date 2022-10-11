@@ -12,8 +12,8 @@ const QuizPage = () => {
         <div className='sm:flex flex-col-reverse lg:grid grid-cols-12 gap-5 m-8'>
 
             <div className='col-span-8'>
-                <h2 className='text-2xl font-bold text-center text-cyan-500'>Quiz of {name}</h2>
-                
+                <h2 className='text-3xl font-bold text-center text-cyan-500'>Quiz of {name}</h2>
+                <p className='my-4 text-xl font-bold text-center text-cyan-500'>Total Quiz: {total}</p>
 
                 <div>
                     {
