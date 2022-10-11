@@ -6,6 +6,7 @@ import './App.css';
 import Topics from './components/Topics';
 import ErrorPage from './ErrorPage';
 import Main from './Main';
+import Statistics from './components/Statistics';
 
 
 const router = createBrowserRouter([
@@ -24,13 +25,18 @@ const router = createBrowserRouter([
       {
         path: '/topics',
         element: <Topics />,
-
+        loader: async () => {
+          return fetch('https://openapi.programming-hero.com/api/quiz');
+        }
       },
       {
         path: '/blog',
         element: <Blog />
       },
-
+      {
+        path: '/statistics',
+        element: <Statistics />
+      }
     ]
   }
 ])
