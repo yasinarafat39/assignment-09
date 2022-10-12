@@ -9,7 +9,7 @@ const Statistics = () => {
     return (
         <div>
             <h2 className='text-center text-2xl font-bold my-8 text-cyan-500'>This Chart describe total amount of Quiz.</h2>
-            <div className='text-center mx-auto'>
+            <div className='flex justify-center text-center mx-auto'>
                 <LineChart width={500} height={300} data={quizTopics}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />

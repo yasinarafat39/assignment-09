@@ -2,7 +2,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 
 const Option = ({ option, correctAnswer}) => {
-
+    console.log(option.index);
     const handleCorrectAns = (option) => {
         // console.log(option);
         if(correctAnswer === option){

@@ -8,7 +8,7 @@ const Quiz = ({ quiz }) => {
 
     const { correctAnswer, id, options, question } = quiz;
 
-
+    console.log(id);
 
     const [visible, setVisible] = useState(false);
 
@@ -35,7 +35,7 @@ const Quiz = ({ quiz }) => {
                 <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 mx-4 mt-6'>
                     {
                         options.map(option => <Option
-                            key={option.index}
+                            key={option}
                             option={option}
                             correctAnswer={correctAnswer}
                         ></Option>)
