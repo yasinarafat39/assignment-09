@@ -1,11 +1,15 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const Option = ({ option, correctAnswer}) => {
 
     const handleCorrectAns = (option) => {
         // console.log(option);
         if(correctAnswer === option){
-            
+            toast.success('Correct Answer', {position: 'top-center', autoClose: 500})
+        }
+        else{
+            toast.error('False Answer', {position: 'top-center', autoClose: 500})
         }
     }
 
