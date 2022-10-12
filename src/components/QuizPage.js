@@ -26,7 +26,7 @@ const QuizPage = () => {
             </div>
 
 
-            <div className='col-span-4 bg-yellow-300'>
+            <div className='col-span-4 bg-cyan-100 rounded-md'>
                     <p className='text-center text-2xl p-5'>Hello yellow</p>
             </div>
         </div>
