@@ -27,9 +27,10 @@ const QuizPage = () => {
 
                 <div>
                     {
-                        questions.map(quiz => <Quiz
+                        questions.map((quiz, index) => <Quiz
                         key={quiz.id}
                         quiz={quiz}
+                        index={index}
                         ></Quiz>)
                     }
                 </div>
