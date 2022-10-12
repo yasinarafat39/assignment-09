@@ -1,23 +1,26 @@
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 import Option from './Option';
 
 const Quiz = ({ quiz }) => {
-    console.log(quiz);
+
     const { correctAnswer, id, options, question } = quiz;
 
 
 
     const [visible, setVisible] = useState(false);
 
-    const handleVisibility = (options) => {
+    const handleVisibility = () => {
+
         if (visible === false) {
-            alert('Visibility True');
-        }else{
-            alert('Visibility False')
+            Swal.fire('Correct Answer is:', correctAnswer)
         }
-        setVisible(!visible);
+        else {
+            setVisible(true)
+        }
+
 
     }
 
@@ -26,7 +29,7 @@ const Quiz = ({ quiz }) => {
         <div>
             <div className='shadow-md p-5 mb-14 relative'>
                 {
-                    visible ? <FontAwesomeIcon onClick={() => handleVisibility(options)} className='text-cyan-500 absolute top-0 right-0 mr-4 mb-3 cursor-pointer' icon={faEye} /> : <FontAwesomeIcon onClick={() => handleVisibility(options)} className='text-cyan-500 absolute top-0 right-0 mr-4 mb-3 cursor-pointer' icon={faEyeSlash} />
+                    visible ? <FontAwesomeIcon onClick={() => handleVisibility()} className='text-cyan-500 absolute top-0 right-0 mr-4 mb-3 cursor-pointer' icon={faEye} /> : <FontAwesomeIcon onClick={() => handleVisibility()} className='text-cyan-500 absolute top-0 right-0 mr-4 mb-3 cursor-pointer' icon={faEyeSlash} />
                 }
                 <h2 className='text-center text-xl text-cyan-500 '>Quiz : {question}</h2>
                 <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 mx-4 mt-6'>
