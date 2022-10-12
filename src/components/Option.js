@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
+import { CountCorrectAns } from '../Main';
 
 const Option = ({ option, correctAnswer}) => {
-    console.log(option.index);
+    
+
+    const countCorrectAns = useContext(CountCorrectAns);
+    const [countAns, setCountAns] = countCorrectAns;
+
+    const countCorrect = () => {
+        setCountAns(countAns + 1);
+    }
+
     const handleCorrectAns = (option) => {
         // console.log(option);
         if(correctAnswer === option){
-            toast.success('Correct Answer', {position: 'top-center', autoClose: 500})
+            toast.success('Correct Answer', {position: 'top-center', autoClose: 500});
+            countCorrect()
         }
         else{
             toast.error('False Answer', {position: 'top-center', autoClose: 500})

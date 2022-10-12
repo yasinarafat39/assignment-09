@@ -4,11 +4,13 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import Option from './Option';
 
+
+
 const Quiz = ({ quiz }) => {
 
     const { correctAnswer, id, options, question } = quiz;
 
-    console.log(id);
+  
 
     const [visible, setVisible] = useState(false);
 
